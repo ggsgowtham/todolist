@@ -6,10 +6,19 @@ var spanInput = $('#edit_tak_<%= @tak.id %>').find('span .editForm'),
 if(textValue && textValue.length > 0){
 	$('#edit_tak_<%= @tak.id %>').find('span.taskName').html(html);
 }
-	
+var incmpUlCnt = $("#incomplete_tasks ul").length	
+
+<% if @tak.complete? %> 
+	--incmpUlCnt;
+<% else %>
+	++incmpUlCnt;
+<% end %>
 
 <% if @tak.complete? %>
   $('#edit_tak_<%= @tak.id %>').appendTo('#complete_tasks').find("span.taskName").addClass('strikeThrough');
 <% else %>
   $('#edit_tak_<%= @tak.id %>').appendTo('#incomplete_tasks').find("span.strikeThrough").removeClass("strikeThrough");
 <% end %>
+
+$("#itemsLeftCount").text(incmpUlCnt);
+ 	

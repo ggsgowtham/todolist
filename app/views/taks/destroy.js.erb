@@ -1,1 +1,4 @@
 $('#edit_tak_<%= @tak.id %>').remove();
+var incmpUlCnt = $("#incomplete_tasks ul").length	
+
+$("#itemsLeftCount").text(--incmpUlCnt);

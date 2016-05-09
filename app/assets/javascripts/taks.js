@@ -1,6 +1,5 @@
 
 jQuery.fn.submitOnCheck = function() {
-  console.log('comes here')
   this.find('span.taskName').dblclick(function(e) {
   	var labelName = $(this).find("label").text();
   	var html = '<input type="text" name="tak[name]" class="editForm" value="'+ labelName +'">'

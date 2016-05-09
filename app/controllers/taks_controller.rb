@@ -78,8 +78,4 @@ class TaksController < ApplicationController
     def tak_params
       params.require(:tak).permit(:name, :complete)
     end
-
-    def delete_multiple
-     @tak = Tak.find(params[:id])
-  end
 end

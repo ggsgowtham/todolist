@@ -1,5 +1,8 @@
 <ul class="list-group">
 <%= form_for tak, remote: true do |f| %>
+  	<% if tak.complete %>
+  		<%= hidden_field_tag "completed_tasks[]", tak.id %>
+  	<% end %>
   <li class="list-group-item">
   	<%= f.check_box :complete %>
   	<span class="taskName <%= 'strikeThrough' if tak.complete %>">
