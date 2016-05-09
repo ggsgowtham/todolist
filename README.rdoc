@@ -1,23 +1,14 @@
-== README
+This is a todolist program made out of Ruby on rails using Jquery and Bootstrap also using Ajax.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How to Use/run the program
+-----------
+1. Download repository
+2. run bundle Install.
+3. rake db:migrate
+3. use rails s to start the server
 
-Things you may want to cover:
+Pre requesties:
+1. Internet to get the bootstrap from CDN.
+2. Mysql for database.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
